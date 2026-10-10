@@ -1,0 +1,38 @@
+[
+  {
+    "name": "ForestFloorPatch",
+    "material": "P5_ForestFloor",
+    "source_texture": "W_ForestFloor_BaseColor.png",
+    "triangles": 64,
+    "footprint_m": 5.97,
+    "plane_z_m": 0.015,
+    "source_tile_m": 4,
+    "texture_size": 512,
+    "alpha_cutoff": 0.4,
+    "collider": false
+  },
+  {
+    "name": "GravelPatch",
+    "material": "P5_Gravel",
+    "source_texture": "W_Rock_BaseColor.png",
+    "triangles": 64,
+    "footprint_m": 5.97,
+    "plane_z_m": 0.015,
+    "source_tile_m": 4,
+    "texture_size": 512,
+    "alpha_cutoff": 0.4,
+    "collider": false
+  },
+  {
+    "name": "MossPatch",
+    "material": "P5_Moss",
+    "source_texture": "W_Grass_BaseColor.png",
+    "triangles": 64,
+    "footprint_m": 5.97,
+    "plane_z_m": 0.015,
+    "source_tile_m": 4,
+    "texture_size": 512,
+    "alpha_cutoff": 0.4,
+    "collider": false
+  }
+]

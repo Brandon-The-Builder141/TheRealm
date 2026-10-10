@@ -1,0 +1,68 @@
+{
+  "GrassTuft_A": {
+    "dimensions_xyz_m": [
+      0.7484,
+      0.727,
+      0.4065
+    ],
+    "triangles": 48,
+    "materials": [
+      "T_Foliage"
+    ]
+  },
+  "GrassTuft_B": {
+    "dimensions_xyz_m": [
+      0.8996,
+      0.9247,
+      0.4198
+    ],
+    "triangles": 64,
+    "materials": [
+      "T_Foliage"
+    ]
+  },
+  "FernPatch": {
+    "dimensions_xyz_m": [
+      1.3953,
+      1.2567,
+      0.659
+    ],
+    "triangles": 54,
+    "materials": [
+      "T_Foliage"
+    ]
+  },
+  "DryScrub": {
+    "dimensions_xyz_m": [
+      1.4031,
+      1.3717,
+      0.7951
+    ],
+    "triangles": 560,
+    "materials": [
+      "W_Bark"
+    ]
+  },
+  "FallenBranch": {
+    "dimensions_xyz_m": [
+      2.0151,
+      0.9674,
+      0.1929
+    ],
+    "triangles": 120,
+    "materials": [
+      "W_Bark"
+    ]
+  },
+  "RootCluster": {
+    "dimensions_xyz_m": [
+      1.7241,
+      1.7245,
+      0.2998
+    ],
+    "triangles": 420,
+    "materials": [
+      "W_Bark"
+    ]
+  }
+}

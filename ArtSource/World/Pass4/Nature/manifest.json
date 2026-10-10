@@ -1,0 +1,60 @@
+{
+  "Cliff_A": {
+    "dimensions_xyz_m": [
+      8.197,
+      5.399,
+      8.741
+    ],
+    "triangles": 688,
+    "materials": [
+      "W_Rock",
+      "W_Rubble"
+    ]
+  },
+  "Cliff_B": {
+    "dimensions_xyz_m": [
+      9.388,
+      6.137,
+      10.54
+    ],
+    "triangles": 688,
+    "materials": [
+      "W_Rock",
+      "W_Rubble"
+    ]
+  },
+  "Cliff_C": {
+    "dimensions_xyz_m": [
+      7.48,
+      4.829,
+      6.993
+    ],
+    "triangles": 688,
+    "materials": [
+      "W_Rock",
+      "W_Rubble"
+    ]
+  },
+  "RockShelf": {
+    "dimensions_xyz_m": [
+      6.752,
+      4.025,
+      1.882
+    ],
+    "triangles": 232,
+    "materials": [
+      "W_Rock"
+    ]
+  },
+  "ScreeCluster": {
+    "dimensions_xyz_m": [
+      4.082,
+      2.381,
+      0.585
+    ],
+    "triangles": 1496,
+    "materials": [
+      "W_Rubble"
+    ]
+  }
+}

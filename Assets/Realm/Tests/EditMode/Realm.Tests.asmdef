@@ -1,0 +1,1 @@
+{"name":"Realm.Tests","rootNamespace":"TheRealm.Tests","references":["Realm.Runtime"],"includePlatforms":["Editor"],"optionalUnityReferences":["TestAssemblies"],"autoReferenced":false}

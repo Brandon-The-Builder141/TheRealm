@@ -1,0 +1,80 @@
+[
+  {
+    "name": "RuinWall_A",
+    "dimensions_xyz_m": [
+      5.001,
+      1.21,
+      3.848
+    ],
+    "triangles": 1892,
+    "materials": [
+      "W_Rubble",
+      "W_Rock"
+    ]
+  },
+  {
+    "name": "RuinWall_B",
+    "dimensions_xyz_m": [
+      4.989,
+      1.219,
+      3.294
+    ],
+    "triangles": 1452,
+    "materials": [
+      "W_Rubble",
+      "W_Rock"
+    ]
+  },
+  {
+    "name": "RuinArch",
+    "dimensions_xyz_m": [
+      6.04,
+      1.226,
+      5.289
+    ],
+    "triangles": 1100,
+    "materials": [
+      "W_Rubble",
+      "W_Rock"
+    ]
+  },
+  {
+    "name": "RuinPillar",
+    "dimensions_xyz_m": [
+      1.646,
+      1.646,
+      4.064
+    ],
+    "triangles": 728,
+    "materials": [
+      "W_Rock",
+      "W_Rubble"
+    ]
+  },
+  {
+    "name": "RuinStairs",
+    "dimensions_xyz_m": [
+      3.295,
+      3.279,
+      2.114
+    ],
+    "triangles": 1364,
+    "materials": [
+      "W_Rock",
+      "W_Rubble"
+    ]
+  },
+  {
+    "name": "RuinRubble",
+    "dimensions_xyz_m": [
+      2.62,
+      2.914,
+      0.887
+    ],
+    "triangles": 1012,
+    "materials": [
+      "W_Rock",
+      "W_Rubble"
+    ]
+  }
+]

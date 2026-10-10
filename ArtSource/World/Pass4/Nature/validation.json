@@ -1,0 +1,57 @@
+[
+  {
+    "name": "Cliff_A",
+    "vertices": 360,
+    "triangles": 688,
+    "uv_layers": 1,
+    "dimensions": [
+      8.196951866149902,
+      8.741305351257324,
+      5.398617744445801
+    ]
+  },
+  {
+    "name": "Cliff_B",
+    "vertices": 360,
+    "triangles": 688,
+    "uv_layers": 1,
+    "dimensions": [
+      9.387895584106445,
+      10.539783477783203,
+      6.1374006271362305
+    ]
+  },
+  {
+    "name": "Cliff_C",
+    "vertices": 360,
+    "triangles": 688,
+    "uv_layers": 1,
+    "dimensions": [
+      7.479754447937012,
+      6.993300914764404,
+      4.828821182250977
+    ]
+  },
+  {
+    "name": "RockShelf",
+    "vertices": 120,
+    "triangles": 232,
+    "uv_layers": 1,
+    "dimensions": [
+      6.751640319824219,
+      1.8823919296264648,
+      4.0245842933654785
+    ]
+  },
+  {
+    "name": "ScreeCluster",
+    "vertices": 792,
+    "triangles": 1496,
+    "uv_layers": 1,
+    "dimensions": [
+      4.082286834716797,
+      0.5848374962806702,
+      2.3805980682373047
+    ]
+  }
+]

@@ -1,0 +1,249 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88121befbf4a32f4e8bf2dd7d6f6afd4, type: 3}
+  m_Name: FrontierCampaign
+  m_EditorClassIdentifier: Realm.Runtime::TheRealm.RealmCampaign
+  quests:
+  - id: embers
+    title: A debt of embers
+    narrator: Warden Elowen
+    prompt: "The forest bells rang without wind. Our missing scouts carried the last
+      wardstone. Bring it home\u2014or learn why they took it."
+    optionA: Promise to recover the stone
+    optionB: Demand payment first
+    success: Your insight earns trust and a stronger reward.
+    failure: Your words fail to convince. The choice remains, but its cost rises.
+    region: 0
+    difficulty: 10
+    skill: 4
+    location: {x: 5, y: 0, z: 9}
+  - id: tracks
+    title: Footsteps beneath the fern
+    narrator: A broken trail
+    prompt: Bootprints turn toward the old grove. A second trail is bloodied, but
+      a warning has been carved into the bark.
+    optionA: Follow the warning carefully
+    optionB: Take the direct trail
+    success: Your insight earns trust and a stronger reward.
+    failure: Your words fail to convince. The choice remains, but its cost rises.
+    region: 0
+    difficulty: 11
+    skill: 2
+    location: {x: -10, y: 0, z: 37}
+  - id: oath
+    title: The deserter's oath
+    narrator: Scout Mara
+    prompt: We took the stone because the roots were dying. Elowen knew. I will show
+      you the grove if you leave my people out of this.
+    optionA: Protect the deserters
+    optionB: Expose them to the settlement
+    success: Your insight earns trust and a stronger reward.
+    failure: Your words fail to convince. The choice remains, but its cost rises.
+    region: 0
+    difficulty: 12
+    skill: 4
+    location: {x: 13, y: 0, z: 65}
+  - id: grove
+    title: The listening grove
+    narrator: The grove remembers
+    prompt: A luminous root curls around the stone. It beats with a heartbeat that
+      is not your own. Taking it may save the village and silence the grove.
+    optionA: Share the stone's strength
+    optionB: Claim it for the settlement
+    success: Your insight earns trust and a stronger reward.
+    failure: Your words fail to convince. The choice remains, but its cost rises.
+    region: 0
+    difficulty: 13
+    skill: 3
+    location: {x: -9, y: 0, z: 91}
+  - id: warden
+    title: Beneath the hollow crown
+    narrator: The Rootbound Warden
+    prompt: 'The guardian falls silent. Its crown contains a map to the borderlands,
+      and a warning: three seals keep the Sleeper dreaming.'
+    optionA: Restore the first seal
+    optionB: Take its power
+    success: Your insight earns trust and a stronger reward.
+    failure: Your words fail to convince. The choice remains, but its cost rises.
+    region: 0
+    difficulty: 14
+    skill: 0
+    location: {x: 0, y: 0, z: 122}
+  - id: return
+    title: What the fire remembers
+    narrator: Warden Elowen
+    prompt: You brought back more than a stone. Tell us what happened in the grove.
+      The people will remember what you say tonight.
+    optionA: Tell the whole truth
+    optionB: Keep the grove's secret
+    success: Your insight earns trust and a stronger reward.
+    failure: Your words fail to convince. The choice remains, but its cost rises.
+    region: 0
+    difficulty: 11
+    skill: 5
+    location: {x: 5, y: 0, z: 9}
+  - id: bridge
+    title: The broken crossing
+    narrator: A ruined crossing
+    prompt: A caravan is trapped beyond the bridge. Repairing the span exposes you
+      to the watchtower; slipping through abandons them.
+    optionA: Repair the crossing
+    optionB: Take the concealed path
+    success: Your insight earns trust and a stronger reward.
+    failure: Your words fail to convince. The choice remains, but its cost rises.
+    region: 1
+    difficulty: 13
+    skill: 5
+    location: {x: -7, y: 0, z: 156}
+  - id: tithe
+    title: The iron tithe
+    narrator: Captain Vey
+    prompt: The border belongs to whoever can hold it. Give me the seal-map and my
+      soldiers will let your village stand.
+    optionA: Negotiate a false bargain
+    optionB: Refuse the captain
+    success: Your insight earns trust and a stronger reward.
+    failure: Your words fail to convince. The choice remains, but its cost rises.
+    region: 1
+    difficulty: 14
+    skill: 1
+    location: {x: 12, y: 0, z: 186}
+  - id: prison
+    title: Names in the quarry
+    narrator: The imprisoned mason
+    prompt: My family built the second seal. The captain made us break it. Open these
+      locks and I can mend what remains.
+    optionA: Free the prisoners quietly
+    optionB: Challenge their captors
+    success: Your insight earns trust and a stronger reward.
+    failure: Your words fail to convince. The choice remains, but its cost rises.
+    region: 1
+    difficulty: 14
+    skill: 1
+    location: {x: -12, y: 0, z: 212}
+  - id: forge
+    title: The silent forge
+    narrator: The last furnace
+    prompt: The forge can strengthen your settlement's wards or restore the border's
+      starving fields. There is fuel for only one.
+    optionA: Restore the fields
+    optionB: Strengthen the village wards
+    success: Your insight earns trust and a stronger reward.
+    failure: Your words fail to convince. The choice remains, but its cost rises.
+    region: 1
+    difficulty: 15
+    skill: 5
+    location: {x: 11, y: 0, z: 241}
+  - id: marshal
+    title: The Ash Marshal
+    narrator: A crown of cinders
+    prompt: The marshal's banner burns. Beneath it, the second seal is cracked open.
+      Beyond lies a stair into a forgotten kingdom.
+    optionA: Mend the second seal
+    optionB: Break it and press onward
+    success: Your insight earns trust and a stronger reward.
+    failure: Your words fail to convince. The choice remains, but its cost rises.
+    region: 1
+    difficulty: 16
+    skill: 0
+    location: {x: 0, y: 0, z: 271}
+  - id: council
+    title: The cost of shelter
+    narrator: The settlement council
+    prompt: Refugees crowd the gates. Welcoming them will strain our stores; turning
+      them away leaves them to the waking realm.
+    optionA: Open the gates
+    optionB: Keep the gates guarded
+    success: Your insight earns trust and a stronger reward.
+    failure: Your words fail to convince. The choice remains, but its cost rises.
+    region: 1
+    difficulty: 13
+    skill: 4
+    location: {x: 5, y: 0, z: 9}
+  - id: stair
+    title: The sunless stair
+    narrator: An ancient inscription
+    prompt: We buried our king with every memory of his cruelty. The stair remembers
+      each trespass. Speak a truth to pass.
+    optionA: Offer an honest confession
+    optionB: Trick the listening stone
+    success: Your insight earns trust and a stronger reward.
+    failure: Your words fail to convince. The choice remains, but its cost rises.
+    region: 2
+    difficulty: 15
+    skill: 2
+    location: {x: -8, y: 0, z: 304}
+  - id: archive
+    title: A kingdom unwritten
+    narrator: The glass archivist
+    prompt: The Sleeper was a guardian before he was a king. Our fear made him a
+      prison. Will you learn what we erased?
+    optionA: Preserve the forbidden history
+    optionB: Destroy the dangerous records
+    success: Your insight earns trust and a stronger reward.
+    failure: Your words fail to convince. The choice remains, but its cost rises.
+    region: 2
+    difficulty: 16
+    skill: 3
+    location: {x: 12, y: 0, z: 333}
+  - id: choir
+    title: The voiceless choir
+    narrator: The bound choir
+    prompt: The voices sustain the last seal. Freeing them weakens the prison. Leaving
+      them binds another age of suffering.
+    optionA: Release the bound voices
+    optionB: Maintain the final seal
+    success: Your insight earns trust and a stronger reward.
+    failure: Your words fail to convince. The choice remains, but its cost rises.
+    region: 2
+    difficulty: 16
+    skill: 4
+    location: {x: -12, y: 0, z: 360}
+  - id: mirror
+    title: The mercy of mirrors
+    narrator: Your reflection
+    prompt: The mirror offers a road home. It promises safety if you leave the next
+      traveler to bear your burden.
+    optionA: Reject the bargain
+    optionB: Accept the costly shortcut
+    success: Your insight earns trust and a stronger reward.
+    failure: Your words fail to convince. The choice remains, but its cost rises.
+    region: 2
+    difficulty: 17
+    skill: 1
+    location: {x: 9, y: 0, z: 386}
+  - id: sleeper
+    title: The king beneath the roots
+    narrator: The Sleeper
+    prompt: The ancient king kneels. His power could shelter your people, but every
+      shelter casts a shadow. Decide what world will follow.
+    optionA: Release the realm from its king
+    optionB: Bind the king to guard the frontier
+    success: Your insight earns trust and a stronger reward.
+    failure: Your words fail to convince. The choice remains, but its cost rises.
+    region: 2
+    difficulty: 18
+    skill: 3
+    location: {x: 0, y: 0, z: 420}
+  - id: dawn
+    title: A dawn you have earned
+    narrator: The people of the frontier
+    prompt: Names of the dead surround the hearth. The world has changed. Those who
+      survived must choose what to build upon it.
+    optionA: Build a refuge for all
+    optionB: Found a vigilant stronghold
+    success: Your insight earns trust and a stronger reward.
+    failure: Your words fail to convince. The choice remains, but its cost rises.
+    region: 2
+    difficulty: 12
+    skill: 4
+    location: {x: 5, y: 0, z: 9}

@@ -1,0 +1,1 @@
+{"name":"Realm.Runtime","rootNamespace":"TheRealm","references":["Unity.Netcode.Runtime","Unity.InputSystem","Unity.Collections","Unity.Networking.Transport"],"autoReferenced":true}
