@@ -13,6 +13,7 @@ namespace TheRealm
         public float Pitch { get; private set; } = 22;
         readonly Dictionary<string,GameObject> actors=new Dictionary<string,GameObject>();
         readonly Dictionary<string,RealmCharacterActor> animated=new Dictionary<string,RealmCharacterActor>();
+        readonly Dictionary<string,RealmEnemyActor> skeletons=new Dictionary<string,RealmEnemyActor>();
         InputActionAsset input;
         InputAction move,look,attack;
         float nextInput;
@@ -71,6 +72,8 @@ namespace TheRealm
             var world=Session.World;
             if(world==null)
             {
+                foreach(var existing in actors.Values) if(existing!=null) Destroy(existing);
+                actors.Clear();animated.Clear();skeletons.Clear();
                 ViewCamera.transform.position=new Vector3(15,10,-9);
                 ViewCamera.transform.LookAt(new Vector3(0,2,18)); marker.SetActive(false); return;
             }
@@ -84,10 +87,21 @@ namespace TheRealm
             }
             foreach(var e in world.enemies)
             {
-                var obj=Actor(e.id,e.name,new Color(.32f,.24f+e.region*.035f,.18f+e.region*.08f),true,e.boss);
-                obj.SetActive(!e.defeated); Place(obj,e.position,e.yaw,false);
-                if(e.telegraphUntil>RealmSession.Now) obj.transform.localScale=Vector3.one*(e.boss?1.8f:1)*(1+.045f*Mathf.Sin(Time.time*18));
-                else obj.transform.localScale=Vector3.one*(e.boss?1.8f:1);
+                if(!actors.ContainsKey(e.id))
+                {
+                    var skeleton=RealmEnemyActor.Spawn(transform,e);
+                    if(skeleton!=null) {skeletons[e.id]=skeleton;actors[e.id]=skeleton.gameObject;skeleton.transform.SetPositionAndRotation(e.position,Quaternion.Euler(0,e.yaw,0));}
+                }
+                if(skeletons.TryGetValue(e.id,out var enemyActor))
+                {
+                    var visual=enemyActor.gameObject;
+                    Place(visual,e.position,e.yaw,false,false);
+                    visual.transform.localScale=Vector3.one*(e.boss?1.8f:1);
+                    enemyActor.Sync(e,Time.deltaTime,RealmSession.Now);
+                    visual.SetActive(enemyActor.Visible);
+                    continue;
+                }
+                // Missing art is reported by Spawn; never substitute the retired block enemies.
             }
             var local=Session.LocalCharacter;
             Vector3 focus=local!=null?local.position:Vector3.zero;

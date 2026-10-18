@@ -20,6 +20,20 @@ namespace TheRealm
             world.dialogue = null;
         }
         public QuestDefinition CurrentQuest => Quests[Mathf.Clamp(World.questIndex, 0, Quests.Length - 1)];
+        // Called only when opening a hosted world. Partial clears survive reconnects;
+        // a completely cleared roster returns without rewinding quests or characters.
+        public bool RestoreClearedEnemies(double now)
+        {
+            if(World.enemies.Count==0 || World.enemies.Exists(e=>!e.defeated)) return false;
+            foreach(var enemy in World.enemies)
+            {
+                enemy.defeated=false;enemy.health=enemy.maxHealth;
+                enemy.position=enemy.home;enemy.yaw=0;
+                enemy.telegraphUntil=0;enemy.vulnerableUntil=0;enemy.nextAttack=now+4;
+            }
+            Note("The cleared frontier stirs again. Your deeds and character progress endure.");
+            return true;
+        }
         public void Note(string text)
         {
             World.history.Add(text);

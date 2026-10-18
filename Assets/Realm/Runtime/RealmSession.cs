@@ -57,6 +57,7 @@ namespace TheRealm
                 World = saves.Load(); Simulation = new RealmSimulation(World,Quests);
                 Simulation.Changed += Persist;
                 Simulation.ResolveMovement = ResolveMovement;
+                Simulation.RestoreClearedEnemies(Now);
                 Simulation.PopulateRegion(World.chapter);
                 owners[NetworkManager.ServerClientId] = Owner;
                 transport.SetConnectionData("127.0.0.1",7777,"0.0.0.0");

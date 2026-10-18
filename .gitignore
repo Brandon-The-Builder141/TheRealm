@@ -58,3 +58,18 @@ secrets.json
 world.json
 world.journal
 world.json.*
+
+# Local imported packs without verified raw-source redistribution permission.
+# Keep installed locally; not required by the Realm gameplay scene.
+/Assets/ArtisticMechanics/
+/Assets/ArtisticMechanics.meta
+/Assets/Furry Squirrel/
+/Assets/Furry Squirrel.meta
+/Assets/RSG_DogsPack/
+/Assets/RSG_DogsPack.meta
+/Assets/TerrainSampleAssets/
+/Assets/TerrainSampleAssets.meta
+/Assets/Wolf/
+/Assets/Wolf.meta
+/Assets/forrest_ground_01_4k.blend/
+/Assets/forrest_ground_01_4k.blend.meta

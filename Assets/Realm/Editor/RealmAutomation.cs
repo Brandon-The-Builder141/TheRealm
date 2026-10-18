@@ -45,6 +45,22 @@ namespace TheRealm.Editor
                     case "status":
                         var s=UnityEngine.Object.FindFirstObjectByType<RealmSession>();
                         Directory.CreateDirectory("Logs/Realm");File.WriteAllText("Logs/Realm/runtime-status.json",s!=null&&s.World!=null?JsonUtility.ToJson(s.World,true):"{\"status\":\"no world\"}");break;
+                    case "inspect-art":
+                        var scene=EditorSceneManager.GetActiveScene();
+                        var session=UnityEngine.Object.FindFirstObjectByType<RealmSession>();
+                        var lines=new System.Collections.Generic.List<string>{"Project="+Application.dataPath,"Scene="+scene.path,"Dirty="+scene.isDirty,"Playing="+EditorApplication.isPlaying,"Compiling="+EditorApplication.isCompiling,"SkeletonResource="+(Resources.Load<RealmEnemyVisualSet>("Characters/Skeletons")!=null),"Session="+(session!=null?session.Status:"none"),"Enemies="+(session?.World?.enemies.Count??0),"SkeletonActors="+UnityEngine.Object.FindObjectsByType<RealmEnemyActor>(FindObjectsInactive.Include,FindObjectsSortMode.None).Length};
+                        foreach(var root in scene.GetRootGameObjects())
+                            foreach(var t in root.GetComponentsInChildren<Transform>(true))
+                                if(t.name=="Imported world props — camps and graves" || t.name==RealmWorldPolish.RootName) lines.Add(t.name+" children="+t.childCount+" active="+t.gameObject.activeInHierarchy);
+                        Directory.CreateDirectory("Logs/Realm");File.WriteAllLines("Logs/Realm/art-status.txt",lines);break;
+                    case "imported-art":
+                        RealmSkeletonImport.Configure();RealmImportedWorldProps.Redistribute();RealmWorldPass5.Validate();RealmWorldPass4.Validate();break;
+                    case "asset-smoke": RealmAssetSmoke.Start();break;
+                    case "enemy-restart-smoke": RealmEnemyRestartSmoke.Start();break;
+                    case "save-verified-art":
+                        if(EditorApplication.isPlayingOrWillChangePlaymode || EditorSceneManager.GetActiveScene().path!=RealmBuilder.ScenePath) throw new InvalidOperationException("Open TheRealm outside Play Mode.");
+                        RealmSkeletonImport.Validate();RealmImportedWorldProps.Validate();RealmWorldPass5.Validate();RealmWorldPass4.Validate();
+                        if(!EditorSceneManager.SaveScene(EditorSceneManager.GetActiveScene())) throw new IOException("Scene save failed.");break;
                     default: throw new InvalidOperationException("Unknown Realm development command.");
                 }
                 File.WriteAllText("Temp/realm-command-result.txt",command.action+" dispatched at "+DateTime.UtcNow.ToString("O"));

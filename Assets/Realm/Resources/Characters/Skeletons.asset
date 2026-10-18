@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 79fd6a02d83e85c40b8f1e2f7ccbb2fc, type: 3}
+  m_Name: Skeletons
+  m_EditorClassIdentifier: Realm.Runtime::TheRealm.RealmEnemyVisualSet
+  models:
+  - {fileID: 919132149155446097, guid: c06e083562d926c41887a94443891ac3, type: 3}
+  - {fileID: 919132149155446097, guid: ca301aac83b6862438561f97ab513878, type: 3}
+  - {fileID: 919132149155446097, guid: ca99c38b34c9553449978c66609e8eae, type: 3}
+  - {fileID: 919132149155446097, guid: fbabbd45ab8b65e42a54039628e68e4f, type: 3}
+  blade: {fileID: 919132149155446097, guid: dbf4e816e02a9cf40bf847cd4a341989, type: 3}
+  staff: {fileID: 919132149155446097, guid: 3f2be7b3978620f46afcc620fe9ded83, type: 3}
+  boneMaterial: {fileID: 2100000, guid: 27d1e2666402c2342b675cf188f62f3b, type: 2}
+  idle: {fileID: -5624545281902316504, guid: 7ba69abaee8a63642aa2c021ddaa9163, type: 3}
+  run: {fileID: 3543698089625107784, guid: 798762e59770480429f7da3cf897f1c0, type: 3}
+  attack: {fileID: 4043807988371827432, guid: 86f044fc9763437459e15e15714a7170, type: 3}
+  staffAttack: {fileID: -3183232228448455838, guid: 86f044fc9763437459e15e15714a7170, type: 3}
+  hit: {fileID: 2825485217256495706, guid: 7ba69abaee8a63642aa2c021ddaa9163, type: 3}
+  death: {fileID: -1923750366902163184, guid: 7ba69abaee8a63642aa2c021ddaa9163, type: 3}

@@ -43,7 +43,7 @@ namespace TheRealm.Editor
                 ("Borderland overview",new Vector3(52,40,154),new Vector3(0,0,218))
             },"Logs/Realm/pass4-preview.png");
         }
-        static void RenderViews((string name, Vector3 position, Vector3 target)[] views,string output)
+        internal static void RenderViews((string name, Vector3 position, Vector3 target)[] views,string output)
         {
             if (EditorApplication.isPlayingOrWillChangePlaymode) throw new System.InvalidOperationException("Exit Play Mode before rendering the world preview.");
             var scene = EditorSceneManager.GetActiveScene();
